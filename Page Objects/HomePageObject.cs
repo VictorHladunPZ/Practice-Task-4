@@ -96,5 +96,26 @@ namespace Practice_Task_4.Page_Objects
                 return false;
             }
         }
+
+        // This is for the last part of the task (ignoring the nickname as I do not know how to do it on GMAIL)
+        public bool CheckLetter()
+        {
+            // WARNING!! THE CURRENT (ASSUMED) IMPLEMENTATION USES THE SAME FIELDS AS WRITELETTER WOULD
+            // THIS MEANS YOU MUST EITHER CHANGE THE FIELDS OR USE ANOTHER OBJECT !!
+
+            // Here , you must
+
+            // Login using LoginPageObject. See Program.cs for implementation
+            
+            // Check recieved letters for the letter with a Theme and body Msg. Possibly check for Recipient too
+
+            // Click on the letter
+
+            // Hit reply and write something
+
+            // Check if letter was sent
+
+            throw new NotImplementedException();
+        }
     }
 }
