@@ -23,6 +23,8 @@ namespace selenium
             //Remember to replace the email
             HomePageObject homePage = new HomePageObject(driver, "victorhladun@gmail.com", "Selenium Test");
             homePage.WriteLetter();
+            driver.Quit();
+            
         }
         
 

@@ -25,6 +25,7 @@ namespace Practice_Task_4.Page_Objects
         }
         public bool Login()
         {
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             // Login input
             var xpath = "//*[@id=\"identifierId\"]";
             driver.Navigate().GoToUrl(testUrl);
@@ -59,10 +60,8 @@ namespace Practice_Task_4.Page_Objects
                 xpath = "/html/body/div[1]/div[1]/div[2]/c-wiz/div/div[3]/div/div[1]/div/div/button/span";
                 ClickElement(driver, xpath);
 
-                // Checks for one of the elements on the home page. If it exists, we logged in.
-                xpath = "/html/body/div[7]/div[3]/div/div[1]/div/div[2]/div[2]/header/div[2]/div[3]/div[1]/div[2]/div/a";
                 
-                return XPathElementExist(driver, xpath);
+                return driver.PageSource.Contains("Inbox");
             }
             catch (Exception ex)
             {
